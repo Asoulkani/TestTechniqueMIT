@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Gestion Des Utilisateur{% endblock %}
+
+{% block body %}
+    <h1>Connexion</h1>
+    <form action="{{ path('cnx') }}" method="post">
+        <div class="form-group">
+            <input type="text" name="_username" id="" class="form-control" placeholder="Pseudo ...">
+        </div>
+        <div class="form-group">
+            <input type="password" name="_password" id="" class="form-control" placeholder="Mot de passe ...">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">se connecter</button>
+        </div>
+    </form>
+
+
+{% endblock %}

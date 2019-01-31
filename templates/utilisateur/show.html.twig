@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion Des Utilisateur{% endblock %}
+
+{% block body %}
+<div class="container jumbotron" style="margin-top: 20px;">
+    <div class="card border-secondary mb-3" style="max-width: 20rem;margin: auto;">
+        <div class="card-header">Utilisateur: {{ utilisateur.nom }} {{ utilisateur.prenom }}</div>
+        <div class="card-body">
+            <p class="card-text">
+                Date de Naissance : {{ utilisateur.dateNaissance | date("m/d/Y") }}<br>
+                Adresse : {{ utilisateur.adresse }}
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

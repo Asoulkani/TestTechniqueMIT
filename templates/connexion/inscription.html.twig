@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Gestion Des Utilisateur{% endblock %}
+
+{% block body %}
+    <h1>Inscription</h1>
+
+    {{ form_start(form) }}
+
+    {{ form_row(form.pseudo,{'attr':{'placeholder':'entrer votre pseudo'}}) }}
+    {{ form_row(form.password,{'label':'Mot de passe','attr':{'placeholder':'entrer votre mot de passe'}}) }}
+    {{ form_row(form.confirmationDeMotDePasse,{'attr':{'placeholder':'retapez le mot de passe'}}) }}
+    <div class="form-group">
+        <button class="btn btn-success" type="submit">s'inscrire</button>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

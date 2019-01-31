@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formUtilisateur 'bootstrap_4_layout.html.twig' %}
+
+{% block title %}Gestion Des Utilisateur{% endblock %}
+
+{% block body %}
+    <h1>{% if(action == "new") %}Nouveau{% else %}Modiffier{% endif %} Utilisateur</h1>
+
+    {{ form_start(formUtilisateur) }}
+
+    {{ form_widget(formUtilisateur) }}
+    <div class="form-group">
+        <button class="btn btn-success" type="submit">{% if(action == "new") %}ajouter{% else %}modiffier{% endif %}</button>
+    </div>
+    {{ form_end(formUtilisateur) }}
+{% endblock %}
